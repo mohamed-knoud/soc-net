@@ -16,6 +16,9 @@ function Home() {
           'Content-Type': 'application/json',
         },
       });
+      } catch (error) {
+    console.error('Error:', error);
+  }
 
       console.log(yi)
   const [formData, setFormData] = useState({
