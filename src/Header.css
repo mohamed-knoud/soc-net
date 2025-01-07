@@ -25,6 +25,13 @@ nav i{
 
 #logo{
     margin-left: 100px;
+    width:150px;
+    height: auto;
+    font-size:1.9em;
+    color:black;
+    margin:20px auto;
+    display: inline-block;
+    font-weight: bold;
 }
 
 #profile{
