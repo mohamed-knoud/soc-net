@@ -16,7 +16,7 @@ function App() {
   const fetchData = async () => {
       try {
         const response = await axios.get("https://soc-net.info/api/show.php");
-        setData(response.data); // Update state with the fetched data
+        console.log(response.data); // Update state with the fetched data
       } catch (err) {
         setError(err.message); // Handle errors
       } finally {
