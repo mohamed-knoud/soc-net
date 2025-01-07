@@ -69,7 +69,9 @@ function Home() {
       }
     }
     
-  
+  useEffect(() => {
+    handleSubmit();
+  }, [formData]); // Empty dependency array: runs only on mount
   };
   return (
     <div id="evr">
