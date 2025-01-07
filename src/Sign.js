@@ -99,7 +99,7 @@ function Home() {
     else{
       try {
         // Send formData to PHP backend
-        const response = await axios.post('http://localhost/api/sign_up.php', formData);
+        const response = await axios.post('https://soc-net.info/api/sign_up.php', formData);
         // console.log(response.data.response1.error)
         // console.log(response.data)
 
