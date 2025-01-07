@@ -29,7 +29,7 @@ function Home() {
         setGood1(false)
         setGood12(false)
         generateRandomNumber()
-              const response = await axios.post('http://localhost/api/code.php',  {
+              const response = await axios.post('https://soc-net.info/api/code.php',  {
                 code:randomNum,
                 email:location.state.response.response1.email
               });
@@ -40,7 +40,7 @@ function Home() {
 
     }
     const handleClick2 = async ()=>{
-              const responsee = await axios.post('http://localhost/api/activate.php',  {
+              const responsee = await axios.post('https://soc-net.info/api/activate.php',  {
                 email:location.state.response.response1.email
               });
               // console.log(responsee)
@@ -79,7 +79,7 @@ function Home() {
     
           try {
             // Make the POST request
-            const response = await axios.post('http://localhost/api/code.php', {
+            const response = await axios.post('https://soc-net.info/api/code.php', {
               code: randomNum,
               email: location.state.response.response1.email,
             });
