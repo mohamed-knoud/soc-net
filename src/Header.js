@@ -68,7 +68,7 @@ function Header() {
     daa = {id_liker:res.data.response.id,id_post:id}; 
     // console.log(daa)
     try {
-      const like = await axios.post('https://soc-net.info/api//addLike.php', daa, {
+      const like = await axios.post('https://soc-net.info/api/addLike.php', daa, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -86,7 +86,7 @@ function Header() {
     daa = {id_liker:res.data.response.id,id_post:id}; 
     // console.log(daa)
     try {
-      let yi = await axios.post('https://soc-net.info/api//removeLike.php', daa, {
+      let yi = await axios.post('https://soc-net.info/api/removeLike.php', daa, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -126,7 +126,7 @@ function Header() {
       daa = {id_liker:res.data.response.id,id_post:id,content:value}; 
       if(daa!==null){
     try {
-      const like = await axios.post('https://soc-net.info/api//addComment.php', daa, {
+      const like = await axios.post('https://soc-net.info/api/addComment.php', daa, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -148,7 +148,7 @@ function Header() {
   //   observer.observe(msg.current, config)
   // }
   try {
-    checkNewComment = await axios.post('https://soc-net.info/api//checkNewComments.php', data, {
+    checkNewComment = await axios.post('https://soc-net.info/api/checkNewComments.php', data, {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -172,7 +172,7 @@ function Header() {
       daa = {id_liker:res.data.response.id,id_post:id,content:value}; 
     if(daa!==null){
     try {
-      const like = await axios.post('https://soc-net.info/api//addComment.php', daa, {
+      const like = await axios.post('https://soc-net.info/api/addComment.php', daa, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -207,7 +207,7 @@ function Header() {
       }
 
       try {
-        const responses = await axios.post('https://soc-net.info/api//addNewPost.php', dataa, {
+        const responses = await axios.post('https://soc-net.info/api/addNewPost.php', dataa, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -227,7 +227,7 @@ function Header() {
     dat = {id:id_post};
     console.log(dat)
       try {
-        const re = await axios.post('https://soc-net.info/api//deletePost.php', dat, {
+        const re = await axios.post('https://soc-net.info/api/deletePost.php', dat, {
           headers: {
           'Content-Type': 'application/json',
           },
@@ -288,7 +288,7 @@ function Header() {
     data = { id_suiveur:res.response.data.id,id_suivi:res.data.response.id }; 
     }
     try {
-      const rds = await axios.post('https://soc-net.info/api//unfollow.php', data, {
+      const rds = await axios.post('https://soc-net.info/api/unfollow.php', data, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -339,7 +339,7 @@ const popup23=useRef(null)
     const data = { input: e.target.value }; 
 
       try {
-        const ras = await axios.post('https://soc-net.info/api//searchUser.php', data, {
+        const ras = await axios.post('https://soc-net.info/api/searchUser.php', data, {
           headers: {
             'Content-Type': 'application/json',
           },
@@ -428,7 +428,7 @@ const popup23=useRef(null)
         const data = { email: localStorage.getItem("email")}; 
         // console.log(data)
         try {
-          res = await axios.post('https://soc-net.info/api//getUserData.php', data, {
+          res = await axios.post('https://soc-net.info/api/getUserData.php', data, {
             headers: {
               'Content-Type': 'application/json',
             },
@@ -443,7 +443,7 @@ const popup23=useRef(null)
             let sa = 0
             const da = { email: localStorage.getItem("email") ,id:follower.id }; 
             try {
-              sa = await axios.post('https://soc-net.info/api//checkFollow.php', da, {
+              sa = await axios.post('https://soc-net.info/api/checkFollow.php', da, {
                 headers: {
                   'Content-Type': 'application/json',
                 },
@@ -461,7 +461,7 @@ const popup23=useRef(null)
             let sad = 0
             const dad = { email: localStorage.getItem("email") ,id:follower.id }; 
             try {
-              sad = await axios.post('https://soc-net.info/api//checkFollow.php', dad, {
+              sad = await axios.post('https://soc-net.info/api/checkFollow.php', dad, {
                 headers: {
                   'Content-Type': 'application/json',
                 },
@@ -618,7 +618,7 @@ const popup23=useRef(null)
         //   observer.observe(msg.current, config)
         // }
         try {
-          checkNewComment = await axios.post('https://soc-net.info/api//checkNewComments.php', data, {
+          checkNewComment = await axios.post('https://soc-net.info/api/checkNewComments.php', data, {
             headers: {
               'Content-Type': 'application/json',
             },
@@ -750,7 +750,7 @@ const popup23=useRef(null)
 
           }else{
       try {
-        const response = await axios.post('https://soc-net.info/api//updateProfile.php', formData, {
+        const response = await axios.post('https://soc-net.info/api/updateProfile.php', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -789,7 +789,7 @@ const popup23=useRef(null)
           (async () => {
             const data = { email: localStorage.getItem("email"),id:res.data.response.id };
             try {
-               const rsa = await axios.post('https://soc-net.info/api//getUsers.php', data, {
+               const rsa = await axios.post('https://soc-net.info/api/getUsers.php', data, {
                 headers: {
                   'Content-Type': 'application/json',
                 },
@@ -1140,7 +1140,7 @@ up.current.style.display='none'
     const follow = async (e,id) => {
         const data = { id_suiveur: res.data.response.id,id_suivi:id }; 
         try {
-          const rds = await axios.post('https://soc-net.info/api//follow.php', data, {
+          const rds = await axios.post('https://soc-net.info/api/follow.php', data, {
             headers: {
               'Content-Type': 'application/json',
             },
@@ -1166,7 +1166,7 @@ up.current.style.display='none'
             let data = {id:rees.data.response.id}; 
             // console.log(data)
             try {
-              rresponses = await axios.post('https://soc-net.info/api//retrievePosts.php', data, {
+              rresponses = await axios.post('https://soc-net.info/api/retrievePosts.php', data, {
                 headers: {
                   'Content-Type': 'application/json',
                 },
@@ -1236,7 +1236,7 @@ up.current.style.display='none'
           <div style={{display:'flex',marginBottom:'10px',justifyContent:'space-between'}} key={index}>
             <div style={{display:'flex'}}>
               {item.image!=null && <img 
-                  src={`http://localhost/${item.image}`} 
+                  src={`https://soc-net.info/${item.image}`} 
                   alt="Preview" 
                   style={{
                       marginLeft: '1px',
@@ -1272,7 +1272,7 @@ up.current.style.display='none'
             <i onClick={openNav2} className="fa-solid fa-message"></i>
             <div className="dropdown">
             {!image2 && formData.image && <img  ref={popup44}
-            src={`http://localhost/uploads/${formData.image}`} 
+            src={`https://soc-net.info/uploads/${formData.image}`} 
             alt="Preview" 
             style={{ marginLeft:'7px',marginBottom:'6px',maxWidth: '100%',marginRight:'15px', height: '35px' ,width:'35px',verticalAlign:'middle',borderRadius:'50%'}} 
           />}
@@ -1320,7 +1320,7 @@ up.current.style.display='none'
       {!image2 && good4 && (
         <div style={{border:'1px solid rgb(200,200,200)',padding:'2px',margin:'30px 20px',width:'150px',height:'auto'}}>
           <img 
-            src={`http://localhost/${formData.image}`} 
+            src={`https://soc-net.info/${formData.image}`} 
             alt="Preview" 
             style={{ maxWidth: '100%', height: 'auto' }} 
           />
@@ -1390,7 +1390,7 @@ up.current.style.display='none'
                 <div>
             {item.profile_pic==null && <i id="profile11" className="dropbtn fa-solid fa-user"></i>}
             {item.profile_pic!=null && <img 
-                src={`http://localhost/${item.profile_pic}`} 
+                src={`https://soc-net.info/${item.profile_pic}`} 
                 alt="Preview" 
                 style={{
                     marginLeft: '1px',
@@ -1414,7 +1414,7 @@ up.current.style.display='none'
             </div>
             </div>
             <img 
-                src={`http://localhost/${item.photo}`} 
+                src={`https://soc-net.info/${item.photo}`} 
                 alt="Preview" 
                 style={{
                     // marginLeft: '1px',
@@ -1473,7 +1473,7 @@ up.current.style.display='none'
         <div style={{display:'flex',flexDirection:'column',padding:'2px',margin:'25px 30px',verticalAlign:'top'}}>
         <div style={{display:'flex'}}>
         {formData.image && (<img 
-            src={`http://localhost/${formData.image}`} 
+            src={`https://soc-net.info/${formData.image}`} 
             alt="Preview" 
             style={{ maxWidth: '100%',marginRight:'15px', height: 'auto' ,width:'60px',verticalAlign:'top',height:'60px',borderRadius:'50%'}} 
           />)}
@@ -1495,7 +1495,7 @@ up.current.style.display='none'
         <div style={{display:'flex',marginBottom:'10px',justifyContent:'space-between'}} key={index}>
           <div style={{display:'flex'}}>
             {item.image!=null && <img 
-                src={`http://localhost/${item.image}`} 
+                src={`https://soc-net.info/${item.image}`} 
                 alt="Preview" 
                 style={{
                     marginLeft: '1px',
@@ -1550,7 +1550,7 @@ up.current.style.display='none'
                 <div style={{display: 'flex'}}>
               {itm.image ? (
                 <img
-                  src={`http://localhost/${itm.image}`}
+                  src={`https://soc-net.info/${itm.image}`}
                   alt="Profile Preview"
                   style={{
                     marginLeft: '1px',
@@ -1594,7 +1594,7 @@ up.current.style.display='none'
       <div style={{display:'flex',justifyContent:'center',alignItems:'flex-start'}}>
 
       {!image2 && formData.image && (<img 
-            src={`http://localhost/${formData.image}`} 
+            src={`https://soc-net.info/${formData.image}`} 
             alt="Preview" 
             id="image30" 
           />)}
@@ -1638,7 +1638,7 @@ up.current.style.display='none'
             <div style={{ display: 'flex' }}>
               {item.image ? (
                 <img
-                  src={`http://localhost/${item.image}`}
+                  src={`https://soc-net.info/${item.image}`}
                   alt="Profile Preview"
                   style={{
                     marginLeft: '1px',
@@ -1689,7 +1689,7 @@ up.current.style.display='none'
             <div style={{ display: 'flex' }}>
               {item.image ? (
                 <img
-                  src={`http://localhost/${item.image}`}
+                  src={`https://soc-net.info/${item.image}`}
                   alt="Profile Preview"
                   style={{
                     marginLeft: '1px',
@@ -1744,7 +1744,7 @@ up.current.style.display='none'
              <div style={{ display: 'flex' }}>
                {item.image ? (
                  <img
-                   src={`http://localhost/${item.image}`}
+                   src={`https://soc-net.info/${item.image}`}
                    alt="Profile Preview"
                    style={{
                      marginLeft: '1px',
@@ -1800,7 +1800,7 @@ up.current.style.display='none'
              <div style={{ display: 'flex' }}>
                {item.image ? (
                  <img
-                   src={`http://localhost/${item.image}`}
+                   src={`https://soc-net.info/${item.image}`}
                    alt="Profile Preview"
                    style={{
                      marginLeft: '1px',
@@ -1842,13 +1842,13 @@ up.current.style.display='none'
           return(
             <div style={{display:'none'}} className={`allp comments boxC_${item.id_post}`} key={item.id_post}>
                 <div className='postg'>
-                  <div style={{width: '65%', height: '100%', overflow: 'hidden', position: 'relative'}}><img style={{width: '100%', height: '100%', position: 'absolute'}} src={`http://localhost/${item.photo}`}/></div>
+                  <div style={{width: '65%', height: '100%', overflow: 'hidden', position: 'relative'}}><img style={{width: '100%', height: '100%', position: 'absolute'}} src={`https://soc-net.info/${item.photo}`}/></div>
                   <div style={{width:'35%',height: '100%',backgroundColor:'white',padding:'10px'}}>
                     <div style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
                       <div style={{display:'flex',alignItems:'center'}}>
                       {item.profile_pic==null && <i id="profile111" className="dropbtn fa-solid fa-user"></i>}
             {item.profile_pic!=null && <img 
-                src={`http://localhost/${item.profile_pic}`} 
+                src={`https://soc-net.info/${item.profile_pic}`} 
                 alt="Preview" 
                 style={{
                     marginLeft: '1px',
@@ -1883,7 +1883,7 @@ return(
                       <div key={index} id={index} style={{display:'flex'}}>
                       {itm.image==null && <i id="profile111" className="dropbtn fa-solid fa-user"></i>}
             {itm.image!=null && <img 
-                src={`http://localhost/${itm.image}`} 
+                src={`https://soc-net.info/${itm.image}`} 
                 alt="Preview" 
                 style={{
                     marginLeft: '1px',
@@ -1910,7 +1910,7 @@ return(
                         <div key={index} id={index} style={{display:'flex'}}>
                         {itm.image==null && <i id="profile111" className="dropbtn fa-solid fa-user"></i>}
               {itm.image!=null && <img 
-                  src={`http://localhost/${itm.image}`} 
+                  src={`https://soc-net.info/${itm.image}`} 
                   alt="Preview" 
                   style={{
                       marginLeft: '1px',
