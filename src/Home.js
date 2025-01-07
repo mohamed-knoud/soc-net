@@ -10,17 +10,14 @@ function Home() {
   localStorage.removeItem("email");
   let daa
     daa = {id_liker:4,id_post:3}; 
-    try {
-      let yi = await axios.post('https://soc-net.info/api/show.php', daa, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      } catch (error) {
-    console.error('Error:', error);
-  }
+    axios.post("https://soc-net.info/api/show.php", daa, config)
+  .then(response => {
+    console.log(response.data); // Handle the response
+  })
+  .catch(error => {
+    console.error(error); // Handle the error
+  });
 
-      console.log(yi)
   const [formData, setFormData] = useState({
       username:'',
       password:''
