@@ -13,6 +13,19 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   sessionStorage.setItem('flag', 0);
+  const fetchData = async () => {
+      try {
+        const response = await axios.get("https://soc-net.info/api/show.php");
+        setData(response.data); // Update state with the fetched data
+      } catch (err) {
+        setError(err.message); // Handle errors
+      } finally {
+        setLoading(false); // Stop loading spinner
+      }
+    };
+
+    fetchData();
+  }, []); // Empty dependency array means this runs once when the component mounts
   return (
     <Router>
       <Routes>
