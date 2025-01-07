@@ -12,7 +12,7 @@ const Comments = ({ checkNewComments }) => {
         <div id={`comment_${item.id}`} style={{display:'flex'}} key={index}>
             {item.image ? (
                  <img
-                   src={`http://localhost/${item.image}`}
+                   src={`https://soc-net.info/${item.image}`}
                    alt="Profile Preview"
                    style={{
                      marginLeft: '1px',
