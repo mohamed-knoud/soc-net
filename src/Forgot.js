@@ -26,7 +26,7 @@ function Home() {
         }else{
 
           try {
-            const response = await axios.post('http://localhost/api/auth2.php',{
+            const response = await axios.post('https://soc-net.info/api//auth2.php',{
               email: email,  // Example data to send
             });
             // console.log('Form data sent successfully:', response.data);
@@ -38,7 +38,7 @@ function Home() {
             generateRandomNumber()
             setGood3(true)
 
-            const response = await axios.post('http://localhost/api/code2.php',  {
+            const response = await axios.post('https://soc-net.info/api//code2.php',  {
               code:randomNum,
               email: email,  // Example data to send
             });
