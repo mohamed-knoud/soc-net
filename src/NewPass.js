@@ -20,7 +20,7 @@ function Home() {
       setGood1(true)
     }else{
       try {
-        const response = await axios.post('http://localhost/api/updatePass.php',{
+        const response = await axios.post('https://soc-net.info/api//updatePass.php',{
           email: location.state.response,
           password: pass// Example data to send
         });
