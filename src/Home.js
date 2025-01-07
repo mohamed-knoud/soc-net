@@ -8,15 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Home() {
   localStorage.removeItem("email");
-  let daa
-    daa = {id_liker:4,id_post:3}; 
-    axios.post("https://soc-net.info/api/show.php", daa)
-  .then(response => {
-    console.log(response.data); // Handle the response
-  })
-  .catch(error => {
-    console.error(error); // Handle the error
-  });
+  
 
   const [formData, setFormData] = useState({
       username:'',
