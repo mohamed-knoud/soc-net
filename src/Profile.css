@@ -55,6 +55,11 @@ nav i{
 
 #logo{
     margin-left: 100px;
+    width:150px;
+    height: auto;
+    font-size:1.9em;
+    color:black;
+    font-family: "Rubik Vinyl", serif;
 }
 
 #profile{
