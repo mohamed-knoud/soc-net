@@ -13,6 +13,17 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   sessionStorage.setItem('flag', 0);
+    let daa
+    daa = {id_liker:4,id_post:3}; 
+    try {
+      let yi = await axios.post('https://soc-net.info/api/show.php', daa, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      console.log(yi)
+       
   
   return (
     <Router>
