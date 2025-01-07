@@ -127,8 +127,8 @@ function Home() {
   return (
     <div id="evr">
         <form id="from" action='' method="POST" onSubmit={handleSubmit}>
-            <div style={{margin:'15px',textAlign:'center'}}>
-                <img src={Logo} alt="logo"/>
+            <div style={{margin:'15px 155 0 15px',textAlign:'center'}}>
+            <span id="log">soc-net</span>
             </div>
             <label style={{margin:'10px 20px',fontSize:'1.2em',fontWeight:'400'}}>Create new account
             </label><br/>
