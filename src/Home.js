@@ -8,15 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Home() {
   localStorage.removeItem("email");
-  axios.get("https://soc-net.info/api/show.php")
-  .then(response => {
-    // Handle the response
-    console.log('Data:', response.data);
-  })
-  .catch(error => {
-    // Handle any errors
-    console.error('Error fetching data:', error.message);
-  });
+  
   const [formData, setFormData] = useState({
       username:'',
       password:''
