@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/soc-net/static/css/main.d6824e53.css",
+    "main.js": "/soc-net/static/js/main.0245d54c.js",
+    "index.html": "/soc-net/index.html",
+    "main.d6824e53.css.map": "/soc-net/static/css/main.d6824e53.css.map",
+    "main.0245d54c.js.map": "/soc-net/static/js/main.0245d54c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d6824e53.css",
+    "static/js/main.0245d54c.js"
+  ]
+}
