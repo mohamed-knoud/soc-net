@@ -1165,7 +1165,7 @@ upsd.current.style.display='none'
     <>
     {visibleOverlay && <div className="overlay"></div>}
     <header id="section1">
-        <div><Link to="/feed"><img id="logo" src={Logo} alt="logo"/></Link></div>
+        <div><Link to="/feed"><span id="logo">soc-net</span></Link></div>
         <div id="second">
         <div className="dropdown">
                   <input value={user} onChange={handle} onClick={()=>{search.current.style.display='block'}} type="text" placeholder='looking for someone...'/>
