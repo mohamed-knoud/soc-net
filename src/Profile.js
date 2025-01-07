@@ -39,7 +39,7 @@ function Profile() {
         }
   
         try {
-          const responses = await axios.post('http://localhost/api/addNewPost.php', dataa, {
+          const responses = await axios.post('https://soc-net.info/api/addNewPost.php', dataa, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
@@ -67,7 +67,7 @@ function Profile() {
     data = { id_suiveur:rs.data.response.id,id_suivi:res.data.response.id }; 
     }
     try {
-      await axios.post('http://localhost/api/follow.php', data, {
+      await axios.post('https://soc-net.info/api/follow.php', data, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -90,7 +90,7 @@ function Profile() {
     // data = {a:1,b:2}
 
     try {
-      const resultat = await axios.post('http://localhost/api/add_msg.php', data, {
+      const resultat = await axios.post('https://soc-net.info/api/add_msg.php', data, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -111,7 +111,7 @@ function Profile() {
     const data = { id_blocked:res.data.response.id,id_blocker:rs.data.response.id }; 
     // console.log(data)
     try {
-      await axios.post('http://localhost/api/block.php', data, {
+      await axios.post('https://soc-net.info/api/block.php', data, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -128,7 +128,7 @@ function Profile() {
     const data = { id_unblocked:res.data.response.id,id_unblocker:rs.data.response.id }; 
     // console.log(data)
     try {
-      await axios.post('http://localhost/api/unblock.php', data, {
+      await axios.post('https://soc-net.info/api/unblock.php', data, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -150,7 +150,7 @@ function Profile() {
     data = { id_suiveur:rs.data.response.id,id_suivi:res.data.response.response.id }; 
     }
     try {
-      await axios.post('http://localhost/api/unfollow.php', data, {
+      await axios.post('https://soc-net.info/api/unfollow.php', data, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -196,7 +196,7 @@ function Profile() {
           const data = { input: e.target.value }; 
       
             try {
-              const ras = await axios.post('http://localhost/api/searchUser.php', data, {
+              const ras = await axios.post('https://soc-net.info/api/searchUser.php', data, {
                 headers: {
                   'Content-Type': 'application/json',
                 },
@@ -292,7 +292,7 @@ function Profile() {
   
       const data = { input: username }; 
       try {
-        rs = await axios.post('http://localhost/api/getUserData.php', data, {
+        rs = await axios.post('https://soc-net.info/api/getUserData.php', data, {
           headers: {
             'Content-Type': 'application/json',
           },
@@ -306,7 +306,7 @@ function Profile() {
           let sa = 0
           const da = { email: localStorage.getItem("email") ,id:follower.id }; 
           try {
-            sa = await axios.post('http://localhost/api/checkFollow.php', da, {
+            sa = await axios.post('https://soc-net.info/api/checkFollow.php', da, {
               headers: {
                 'Content-Type': 'application/json',
               },
@@ -323,7 +323,7 @@ function Profile() {
           let sad = 0
           const dad = { email: localStorage.getItem("email") ,id:follower.id }; 
           try {
-            sad = await axios.post('http://localhost/api/checkFollow.php', dad, {
+            sad = await axios.post('https://soc-net.info/api/checkFollow.php', dad, {
               headers: {
                 'Content-Type': 'application/json',
               },
@@ -360,7 +360,7 @@ function Profile() {
   
         const data = { email: localStorage.getItem("email") , input: username }; 
         try {
-          res = await axios.post('http://localhost/api/getUserData.php', data, {
+          res = await axios.post('https://soc-net.info/api/getUserData.php', data, {
             headers: {
               'Content-Type': 'application/json',
             },
@@ -374,7 +374,7 @@ function Profile() {
             let sa = 0
             const da = { email: localStorage.getItem("email") ,id:follower.id }; 
             try {
-              sa = await axios.post('http://localhost/api/checkFollow.php', da, {
+              sa = await axios.post('https://soc-net.info/api/checkFollow.php', da, {
                 headers: {
                   'Content-Type': 'application/json',
                 },
@@ -391,7 +391,7 @@ function Profile() {
             let sad = 0
             const dad = { email: localStorage.getItem("email") ,id:follower.id }; 
             try {
-              sad = await axios.post('http://localhost/api/checkFollow.php', dad, {
+              sad = await axios.post('https://soc-net.info/api/checkFollow.php', dad, {
                 headers: {
                   'Content-Type': 'application/json',
                 },
@@ -673,7 +673,7 @@ function Profile() {
 
           }else{
       try {
-        const response = await axios.post('http://localhost/api/updateProfile.php', formData, {
+        const response = await axios.post('https://soc-net.info/api/updateProfile.php', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -699,7 +699,7 @@ function Profile() {
     
         const email = { email: localStorage.getItem("email") }; // Example data to send to PHP script
         try {
-          const rsa = await axios.post('http://localhost/api/getUsers.php', email, {
+          const rsa = await axios.post('https://soc-net.info/api/getUsers.php', email, {
             headers: {
               'Content-Type': 'application/json',
             },
@@ -1114,7 +1114,7 @@ upsd.current.style.display='none'
           observer.observe(msg.current, config)
         }
         try {
-          newMessagess = await axios.post('http://localhost/api/checkNewMessages.php', data, {
+          newMessagess = await axios.post('https://soc-net.info/api/checkNewMessages.php', data, {
             headers: {
               'Content-Type': 'application/json',
             },
