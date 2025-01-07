@@ -71,9 +71,9 @@ function Home() {
     
  
   };
-   useEffect(() => {
-    handleSubmit();
-  }, [formData]); // Empty dependency array: runs only on mount
+  //  useEffect(() => {
+  //   handleSubmit();
+  // }, [formData]); // Empty dependency array: runs only on mount
   return (
     <div id="evr">
         <form id="from" action='' method="POST" onSubmit={handleSubmit}>
