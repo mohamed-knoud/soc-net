@@ -1221,7 +1221,7 @@ up.current.style.display='none'
     <>
     {visibleOverlay && <div className="overlay"></div>}
     <header id="section1">
-        <div><a href=""><img id="logo" src={Logo} alt="logo"/></a></div>
+        <div><a href=""><span id="logo">soc-net</span></a></div>
         <div id="second">
         <div className="dropdown">
           <input value={user} onChange={handle} onClick={()=>{search.current.style.display='block'}} type="text" name="user" placeholder='looking for someone...'/>
